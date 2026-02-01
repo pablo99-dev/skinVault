@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mes skins favoris</title>
+    <link rel="stylesheet" href="{% static 'shop/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'shop/css/skins.css' %}">
+</head>
+<body>
+
+<h1 class="skins-title">Mes skins favoris</h1>
+
+<!-- Message si aucun favori -->
+{% if message %}
+    <p class="no-favorites">{{ message }}</p>
+{% endif %}
+
+<div class="skins-grid">
+    {% for skin in skins %}
+    <div class="skin-card">
+        <div class="skin-name">{{ skin.name }}</div>
+        <img src="{{ skin.image }}" alt="{{ skin.name }}">
+        <div class="skin-price">${{ skin.price }}</div>
+
+        <form method="POST" action="{% url 'add_favorite' %}">
+            {% csrf_token %}
+            <input type="hidden" name="skin_id" value="{{ skin.skin_id }}">
+            <input type="hidden" name="next" value="{{ request.path }}">
+            <button type="submit"> Retirer des favoris</button>
+</form>
+
+    </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>

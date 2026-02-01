@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>CSGO Skins Dashboard</title>
+    <link rel="stylesheet" href="{% static 'shop/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'shop/css/skins.css' %}">
+</head>
+<body>
+
+<header class="header">
+    <!-- Logo -->
+    <img src="{% static 'shop/images/logo.jpeg' %}" alt="Logo" class="logo">
+
+    <!-- Menu principal -->
+    <ul class="menu">
+
+        <!-- Knives -->
+        <li class="menu-item">
+            Knives <span class="arrow">▼</span>
+            <ul class="submenu">
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='Karambit' %}">Karambit</a></li>
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='Butterfly' %}">Butterfly</a></li>
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='M9 Bayonet' %}">M9 Bayonet</a></li>
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='Gut' %}">Gut</a></li>
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='Flip' %}">Flip</a></li>
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='Huntsman' %}">Huntsman</a></li>
+            </ul>
+        </li>
+
+        <!-- Rifles -->
+        <li class="menu-item">
+            Rifles <span class="arrow">▼</span>
+            <ul class="submenu">
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='AK-47' %}">AK-47</a></li>
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='M4A4' %}">M4A4</a></li>
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='M4A1-S' %}">M4A1-S</a></li>
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='AUG' %}">AUG</a></li>
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='SG 553' %}">SG 553</a></li>
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='FAMAS' %}">FAMAS</a></li>
+            </ul>
+        </li>
+
+        <!-- SMGs -->
+        <li class="menu-item">
+            SMGs <span class="arrow">▼</span>
+            <ul class="submenu">
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='MP9' %}">MP9</a></li>
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='UMP-45' %}">UMP-45</a></li>
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='MP7' %}">MP7</a></li>
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='P90' %}">P90</a></li>
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='MAC-10' %}">MAC-10</a></li>
+            </ul>
+        </li>
+
+        <!-- Snipers -->
+        <li class="menu-item">
+            Snipers <span class="arrow">▼</span>
+            <ul class="submenu">
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='AWP' %}">AWP</a></li>
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='SSG 08' %}">SSG 08</a></li>
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='SCAR-20' %}">SCAR-20</a></li>
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='G3SG1' %}">G3SG1</a></li>
+            </ul>
+        </li>
+
+        <!-- Pistols -->
+        <li class="menu-item">
+            Pistols <span class="arrow">▼</span>
+            <ul class="submenu">
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='Glock' %}">Glock</a></li>
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='USP-S' %}">USP-S</a></li>
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='Desert Eagle' %}">Desert Eagle</a></li>
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='P250' %}">P250</a></li>
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='Five-SeveN' %}">Five-SeveN</a></li>
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='CZ75' %}">CZ75</a></li>
+            </ul>
+        </li>
+
+        <!-- Shotguns -->
+        <li class="menu-item">
+            Shotguns <span class="arrow">▼</span>
+            <ul class="submenu">
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='Nova' %}">Nova</a></li>
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='XM1014' %}">XM1014</a></li>
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='MAG-7' %}">MAG-7</a></li>
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='Sawed-Off' %}">Sawed-Off</a></li>
+            </ul>
+        </li>
+
+        <!-- Machine Guns -->
+        <li class="menu-item">
+            Machine Guns <span class="arrow">▼</span>
+            <ul class="submenu">
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='M249' %}">M249</a></li>
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='Negev' %}">Negev</a></li>
+            </ul>
+        </li>
+
+        <!-- Stickers -->
+        <li class="menu-item">
+            Stickers <span class="arrow">▼</span>
+            <ul class="submenu">
+                <li><a href="{% url 'weapon_detail_by_name' weapon_name='All Stickers' %}">All Stickers</a></li>
+            </ul>
+        </li>
+
+    </ul>   
+    <div class="user-actions">
+        <a href="{% url 'favorites' %}">⭐ Mes favoris</a>
+        <a href="{% url 'logout' %}">🚪 Se déconnecter</a>
+    </div>
+</header>
+
+
+<main>
+    {% for category_name, skins in dashboard_data.items %}
+        <div class="skins-grid">
+            {% for skin in skins %}
+                <div class="skin-card">
+                    <div class="weapon-name">{{ skin.weapon_name }}</div>
+                    <div class="skin-name">{{ skin.skin_name }}</div>
+                    <img src="{{ skin.image }}" alt="{{ skin.skin_name }}">
+                    <div class="skin-price">${{ skin.price }}</div>
+
+                  <form method="POST" action="{% url 'add_favorite' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="skin_id" value="{{ skin.skin_id }}">
+                    <input type="hidden" name="next" value="{{ request.path }}">
+                    <button type="submit"> Ajouter/Retirer des favoris</button>
+</form>
+
+
+
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</main>
+
+</body>
+</html>
